@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidUtils</string>
+
+    <string name="toast_google_play_error">Error opening Google Play Store, please try again</string>
 </resources>

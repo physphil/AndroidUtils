@@ -1,4 +1,4 @@
-package com.physphil.android.androidutils.UiUtils;
+package com.physphil.android.androidutils.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
