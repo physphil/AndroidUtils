@@ -28,11 +28,11 @@ public class TextViewPlus extends TextView {
     private AttributeSet mAttrs;
 
     public TextViewPlus(Context context) {
-        super(context, null);
+        this(context, null);
     }
 
     public TextViewPlus(Context context, AttributeSet attrs) {
-        super(context, attrs, 0);
+        this(context, attrs, 0);
     }
 
     public TextViewPlus(Context context, AttributeSet attrs, int defStyle) {
@@ -54,11 +54,6 @@ public class TextViewPlus extends TextView {
      * Set typeface for TextView from xml property or from default value
      */
     private void setTypefaceSpecifiedByUser(){
-
-        if(mTypefaces == null){
-
-            mTypefaces = new HashMap<String, Typeface>();
-        }
 
         if(mAttrs != null) {
 
@@ -85,6 +80,11 @@ public class TextViewPlus extends TextView {
      * @return specified typeface
      */
     private Typeface getTypefaceByUser(String typefacePath){
+
+        if(mTypefaces == null){
+
+            mTypefaces = new HashMap<String, Typeface>();
+        }
 
         Typeface tf;
         if(mTypefaces.containsKey(typefacePath)){

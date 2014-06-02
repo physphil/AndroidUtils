@@ -9,7 +9,7 @@ import android.util.AttributeSet;
  */
 public class TextViewLight extends TextViewPlus {
 
-    private static final String TYPEFACE_PATH = "roboto_light.ttf";
+    private static final String TYPEFACE_PATH = "font_roboto_light.ttf";
 
     public TextViewLight(Context context) {
         super(context);
