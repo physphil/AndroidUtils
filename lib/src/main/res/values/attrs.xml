@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Custom attributes required for TextView -->
+    <declare-styleable name="TextViewPlus">
+        <attr name="typeface" format="string" />
+    </declare-styleable>
+
+</resources>
