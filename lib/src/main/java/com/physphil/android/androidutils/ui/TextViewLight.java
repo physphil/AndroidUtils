@@ -29,16 +29,22 @@ public class TextViewLight extends TextViewPlus {
 
     public TextViewLight(Context context) {
         super(context);
-        setDefaultTypeface(TYPEFACE_PATH);
+        if(!isInEditMode()) {
+            setDefaultTypeface(TYPEFACE_PATH);
+        }
     }
 
     public TextViewLight(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setDefaultTypeface(TYPEFACE_PATH);
+        if(!isInEditMode()) {
+            setDefaultTypeface(TYPEFACE_PATH);
+        }
     }
 
     public TextViewLight(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        setDefaultTypeface(TYPEFACE_PATH);
+        if(!isInEditMode()) {
+            setDefaultTypeface(TYPEFACE_PATH);
+        }
     }
 }

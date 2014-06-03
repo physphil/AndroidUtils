@@ -55,7 +55,10 @@ public class TextViewPlus extends TextView {
         super(context, attrs, defStyle);
         mContext = context;
         mAttrs = attrs;
-        init();
+
+        if(!isInEditMode()) {
+            init();
+        }
     }
 
     /**
