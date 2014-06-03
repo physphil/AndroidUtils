@@ -25,6 +25,9 @@ import android.util.AttributeSet;
  */
 public class TextViewLight extends TextViewPlus {
 
+    /**
+     * Font stored in "assets" folder
+     */
     private static final String TYPEFACE_PATH = "font_roboto_light.ttf";
 
     public TextViewLight(Context context) {
@@ -36,13 +39,6 @@ public class TextViewLight extends TextViewPlus {
 
     public TextViewLight(Context context, AttributeSet attrs) {
         super(context, attrs);
-        if(!isInEditMode()) {
-            setDefaultTypeface(TYPEFACE_PATH);
-        }
-    }
-
-    public TextViewLight(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
         if(!isInEditMode()) {
             setDefaultTypeface(TYPEFACE_PATH);
         }

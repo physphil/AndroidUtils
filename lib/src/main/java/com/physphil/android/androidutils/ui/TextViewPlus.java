@@ -48,11 +48,7 @@ public class TextViewPlus extends TextView {
     }
 
     public TextViewPlus(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-
-    public TextViewPlus(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
+        super(context, attrs);
         mContext = context;
         mAttrs = attrs;
 
