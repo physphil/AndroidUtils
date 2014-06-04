@@ -17,7 +17,7 @@
 
 <resources>
 
-    <!-- Custom attributes required for TextView -->
+    <!-- Custom attributes required for TextView. Specify as "font_roboto_light.ttf", for example -->
     <declare-styleable name="TextViewPlus">
         <attr name="typeface" format="string" />
     </declare-styleable>

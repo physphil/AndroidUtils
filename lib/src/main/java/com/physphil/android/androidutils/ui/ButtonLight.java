@@ -20,27 +20,21 @@ import android.content.Context;
 import android.util.AttributeSet;
 
 /**
- * Subclass of TextViewPlus, specifying the default font as Roboto Light
- * Created by pshadlyn on 6/2/2014.
+ * Created by pshadlyn on 6/4/2014.
  */
-public class TextViewLight extends TextViewPlus {
+public class ButtonLight extends ButtonPlus {
 
-    /**
-     * Font stored in "assets" folder
-     */
-    public static final String TYPEFACE_PATH = "font_roboto_light.ttf";
-
-    public TextViewLight(Context context) {
+    public ButtonLight(Context context) {
         super(context);
         if(!isInEditMode()) {
-            setDefaultTypeface(TYPEFACE_PATH);
+            setDefaultTypeface(TextViewLight.TYPEFACE_PATH);
         }
     }
 
-    public TextViewLight(Context context, AttributeSet attrs) {
+    public ButtonLight(Context context, AttributeSet attrs) {
         super(context, attrs);
         if(!isInEditMode()) {
-            setDefaultTypeface(TYPEFACE_PATH);
+            setDefaultTypeface(TextViewLight.TYPEFACE_PATH);
         }
     }
 }

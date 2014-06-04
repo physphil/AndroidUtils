@@ -20,34 +20,25 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.widget.TextView;
+import android.widget.Button;
 
 import com.physphil.android.androidutils.R;
 
 import java.util.HashMap;
-import java.util.Map;
 
 /**
- * Extended TextView to add more features.
- *
- * To set font, copy font ttf file in project assets folder in a "fonts" folder, and reference via xml property: typeface="fonts/my_font.ttf".
- * Can also subclass by passing default typeface in constructor, which creates a TextView with the specified typeface as a default
- * Created by pshadlyn on 6/2/2014.
+ * Created by pshadlyn on 6/4/2014.
  */
-public class TextViewPlus extends TextView {
+public class ButtonPlus extends Button {
 
-    /**
-     * Cache typefaces to avoid multiple creation on pre-ICS devices. See https://code.google.com/p/android/issues/detail?id=9904
-     */
-    public static Map<String, Typeface> mTypefaces;
     private Context mContext;
     private AttributeSet mAttrs;
 
-    public TextViewPlus(Context context) {
+    public ButtonPlus(Context context) {
         this(context, null);
     }
 
-    public TextViewPlus(Context context, AttributeSet attrs) {
+    public ButtonPlus(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         mAttrs = attrs;
@@ -96,19 +87,19 @@ public class TextViewPlus extends TextView {
      */
     private Typeface getTypefaceByUser(String typefacePath){
 
-        if(mTypefaces == null){
+        if(TextViewPlus.mTypefaces == null){
 
-            mTypefaces = new HashMap<String, Typeface>();
+            TextViewPlus.mTypefaces = new HashMap<String, Typeface>();
         }
 
         Typeface tf;
-        if(mTypefaces.containsKey(typefacePath)){
-            tf = mTypefaces.get(typefacePath);
+        if(TextViewPlus.mTypefaces.containsKey(typefacePath)){
+            tf = TextViewPlus.mTypefaces.get(typefacePath);
         }
         else{
 
             tf = Typeface.createFromAsset(mContext.getAssets(), typefacePath);
-            mTypefaces.put(typefacePath, tf);
+            TextViewPlus.mTypefaces.put(typefacePath, tf);
         }
 
         return tf;
@@ -127,5 +118,4 @@ public class TextViewPlus extends TextView {
             setTypeface(getTypefaceByUser(typefacePath));
         }
     }
-
 }
