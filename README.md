@@ -8,3 +8,5 @@ Includes:
   - E-mail developer
   - Open app in Google Play Store
   - EndlessIntentService - long running IntentService which needs to be explicitly stopped
+
+VERY MUCH UNDER CONSTRUCTION
